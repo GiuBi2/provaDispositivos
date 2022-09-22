@@ -15,12 +15,12 @@ let resultado;
 
    var suafalta = cargahr*0.25;
    var faltas = suafalta - falta;
-
+let diaspossiveis = suafalta/dias;
   
 if(falta > suafalta){
     resultado = "Você está reprovado por falta em " + nome + ` , não importa se vai faltar mais`;
 } else {
-    resultado = "Você está em curso em " + nome + " , pode faltar " + faltas + " aulas " ;
+    resultado = "Você está em curso em " + nome + " , pode faltar " + faltas + " aulas e " + diaspossiveis+ " dias" ;
 }
 document.getElementById("resultado").textContent = resultado
 }
