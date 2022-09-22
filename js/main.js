@@ -9,18 +9,19 @@ let botaoCalcular = document.getElementById("btn_calcular");
 function calcularpresenca(){
    var nome = document.getElementById("name").value;
    var cargahr = document.getElementById("carga").value;
-   var dias = document.getElementById("aulas").value;
+   var aulas = document.getElementById("aulas").value;
    var falta =document.getElementById("falta").value;
 let resultado;
 
    var suafalta = cargahr*0.25;
-   var faltas = suafalta - falta;
-let diaspossiveis = suafalta/dias;
+
   
 if(falta > suafalta){
     resultado = "Você está reprovado por falta em " + nome + ` , não importa se vai faltar mais`;
 } else {
-    resultado = "Você está em curso em " + nome + " , pode faltar " + faltas + " aulas e " + diaspossiveis+ " dias" ;
+    var faltas = suafalta - falta;
+    resultado = `Em curso, faltas pemitidas: ${faltas}, dias disponiveis: ${Math.floor( faltas /  aulas)}`
+
 }
 document.getElementById("resultado").textContent = resultado
 }
