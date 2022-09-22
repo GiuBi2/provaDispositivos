@@ -1,0 +1,14 @@
+{
+  "name": "provadispositivos",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "author": "giulia",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^14.0.1"
+  },
+  "description": "index.html"
+}
